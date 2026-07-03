@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "store": {
+    "store_id": "STORE_2",
+    "store_name": "Store 2",
+    "city": null,
+    "country": null,
+    "timezone": "Asia/Calcutta",
+    "aliases": [],
+    "layout_source": null,
+    "layout_notes": null,
+    "layout": {
+      "width": 960,
+      "height": 1210,
+      "image": "layout.png",
+      "units": "px"
+    }
+  },
+  "zones": [
+    {
+      "zone_id": "ENTRY_LEFT",
+      "zone_name": "Entry - Left Panel",
+      "zone_type": "ENTRY",
+      "layout_box": null,
+      "polygon": [
+        [
+          0.0,
+          0.65
+        ],
+        [
+          0.45,
+          0.65
+        ],
+        [
+          0.45,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "brands": [],
+      "metadata": {}
+    },
+    {
+      "zone_id": "ENTRY_RIGHT",
+      "zone_name": "Entry - Right Panel",
+      "zone_type": "ENTRY",
+      "layout_box": null,
+      "polygon": [
+        [
+          0.55,
+          0.65
+        ],
+        [
+          1.0,
+          0.65
+        ],
+        [
+          1.0,
+          1.0
+        ],
+        [
+          0.55,
+          1.0
+        ]
+      ],
+      "brands": [],
+      "metadata": {}
+    },
+    {
+      "zone_id": "BOH",
+      "zone_name": "Back of House / Main Display",
+      "zone_type": "AISLE",
+      "layout_box": null,
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.65
+        ],
+        [
+          0.0,
+          0.65
+        ]
+      ],
+      "brands": [],
+      "metadata": {}
+    },
+    {
+      "zone_id": "BILLING",
+      "zone_name": "Billing / Cash Counter",
+      "zone_type": "CHECKOUT",
+      "layout_box": null,
+      "polygon": [
+        [
+          0.72,
+          0.15
+        ],
+        [
+          1.0,
+          0.15
+        ],
+        [
+          1.0,
+          0.65
+        ],
+        [
+          0.72,
+          0.65
+        ]
+      ],
+      "brands": [],
+      "metadata": {}
+    }
+  ],
+  "cameras": [
+    {
+      "camera_id": "ENTRY_1",
+      "role": "ENTRY",
+      "source_file": "ENTRY_1.mp4",
+      "name": "Entry Left",
+      "fps": 25.0,
+      "resolution": [
+        960,
+        1080
+      ],
+      "coverage": [
+        "ENTRY_LEFT"
+      ],
+      "zone_polygons": {
+        "ENTRY_LEFT": [
+          [
+            0.0,
+            0.65
+          ],
+          [
+            0.45,
+            0.65
+          ],
+          [
+            0.45,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "adjacent_cameras": [
+        "ZONE_1",
+        "BILLING_1"
+      ],
+      "entry_line": null
+    },
+    {
+      "camera_id": "ENTRY_2",
+      "role": "ENTRY",
+      "source_file": "ENTRY_2.mp4",
+      "name": "Entry Right",
+      "fps": 25.0,
+      "resolution": [
+        960,
+        1080
+      ],
+      "coverage": [
+        "ENTRY_RIGHT"
+      ],
+      "zone_polygons": {
+        "ENTRY_RIGHT": [
+          [
+            0.55,
+            0.65
+          ],
+          [
+            1.0,
+            0.65
+          ],
+          [
+            1.0,
+            1.0
+          ],
+          [
+            0.55,
+            1.0
+          ]
+        ]
+      },
+      "adjacent_cameras": [
+        "ZONE_1",
+        "BILLING_1"
+      ],
+      "entry_line": null
+    },
+    {
+      "camera_id": "ZONE_1",
+      "role": "ZONE",
+      "source_file": "ZONE_1.mp4",
+      "name": "Back of House / Main Display",
+      "fps": 25.0,
+      "resolution": [
+        960,
+        1080
+      ],
+      "coverage": [
+        "BOH",
+        "BILLING"
+      ],
+      "zone_polygons": {
+        "BOH": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.65
+          ],
+          [
+            0.0,
+            0.65
+          ]
+        ],
+        "BILLING": [
+          [
+            0.72,
+            0.15
+          ],
+          [
+            1.0,
+            0.15
+          ],
+          [
+            1.0,
+            0.65
+          ],
+          [
+            0.72,
+            0.65
+          ]
+        ]
+      },
+      "adjacent_cameras": [
+        "ENTRY_1",
+        "ENTRY_2",
+        "BILLING_1"
+      ],
+      "entry_line": null
+    },
+    {
+      "camera_id": "BILLING_1",
+      "role": "BILLING",
+      "source_file": "BILLING_1.mp4",
+      "name": "Billing / Cash Counter",
+      "fps": 25.0,
+      "resolution": [
+        960,
+        1080
+      ],
+      "coverage": [
+        "BILLING"
+      ],
+      "zone_polygons": {
+        "BILLING": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "adjacent_cameras": [
+        "ENTRY_1",
+        "ENTRY_2",
+        "ZONE_1"
+      ],
+      "entry_line": null
+    }
+  ],
+  "transition_graph": {
+    "ENTRY_1": [
+      "ZONE_1",
+      "BILLING_1"
+    ],
+    "ENTRY_2": [
+      "ZONE_1",
+      "BILLING_1"
+    ],
+    "ZONE_1": [
+      "ENTRY_1",
+      "ENTRY_2",
+      "BILLING_1"
+    ],
+    "BILLING_1": [
+      "ENTRY_1",
+      "ENTRY_2",
+      "ZONE_1"
+    ]
+  }
+}

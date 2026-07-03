@@ -1,0 +1,25 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install system dependencies including video processing
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install Python dependencies
+COPY requirements.detection.txt .
+RUN pip install --no-cache-dir -r requirements.detection.txt
+
+# Copy application code
+COPY src /app/src
+COPY data /app/data
+COPY ml-models /app/ml-models
+COPY pyproject.toml .
+
+# Create non-root user
+RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
+USER appuser
+
+# Run detection pipeline
+CMD ["python", "-m", "src.detection.pipeline"]

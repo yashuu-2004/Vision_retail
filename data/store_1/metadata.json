@@ -1,0 +1,363 @@
+{
+  "schema_version": "1.0.0",
+  "store": {
+    "store_id": "STORE_1",
+    "store_name": "Store 1",
+    "city": null,
+    "country": null,
+    "timezone": "Asia/Calcutta",
+    "aliases": [],
+    "layout_source": null,
+    "layout_notes": null,
+    "layout": {
+      "width": 1920,
+      "height": 1080,
+      "image": "layout.png",
+      "units": "px"
+    }
+  },
+  "zones": [
+    {
+      "zone_id": "ENTRY",
+      "zone_name": "Store Entry / Glass Entrance",
+      "zone_type": "ENTRY",
+      "layout_box": null,
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.3
+        ],
+        [
+          0.0,
+          0.3
+        ]
+      ],
+      "brands": [],
+      "metadata": {
+        "description": "Main glass entrance"
+      }
+    },
+    {
+      "zone_id": "FOH_TOP",
+      "zone_name": "Front of House - Top Shelves",
+      "zone_type": "AISLE",
+      "layout_box": null,
+      "polygon": [
+        [
+          0.0,
+          0.3
+        ],
+        [
+          1.0,
+          0.3
+        ],
+        [
+          1.0,
+          0.55
+        ],
+        [
+          0.0,
+          0.55
+        ]
+      ],
+      "brands": [],
+      "metadata": {}
+    },
+    {
+      "zone_id": "FOH_BOTTOM",
+      "zone_name": "Front of House - Bottom Display",
+      "zone_type": "DISPLAY",
+      "layout_box": null,
+      "polygon": [
+        [
+          0.0,
+          0.55
+        ],
+        [
+          1.0,
+          0.55
+        ],
+        [
+          1.0,
+          0.95
+        ],
+        [
+          0.0,
+          0.95
+        ]
+      ],
+      "brands": [],
+      "metadata": {}
+    },
+    {
+      "zone_id": "CASH_COUNTER",
+      "zone_name": "Cash Counter / Billing",
+      "zone_type": "CHECKOUT",
+      "layout_box": null,
+      "polygon": [
+        [
+          0.72,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0
+        ],
+        [
+          0.72,
+          1.0
+        ]
+      ],
+      "brands": [],
+      "metadata": {}
+    }
+  ],
+  "cameras": [
+    {
+      "camera_id": "CAM_1",
+      "role": "ZONE",
+      "source_file": "CAM_1.mp4",
+      "name": "Main Floor - Left/Center",
+      "fps": 29.97,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "coverage": [
+        "FOH_TOP",
+        "FOH_BOTTOM"
+      ],
+      "zone_polygons": {
+        "FOH_TOP": [
+          [
+            0.0,
+            0.3
+          ],
+          [
+            1.0,
+            0.3
+          ],
+          [
+            1.0,
+            0.55
+          ],
+          [
+            0.0,
+            0.55
+          ]
+        ],
+        "FOH_BOTTOM": [
+          [
+            0.0,
+            0.55
+          ],
+          [
+            1.0,
+            0.55
+          ],
+          [
+            1.0,
+            0.95
+          ],
+          [
+            0.0,
+            0.95
+          ]
+        ]
+      },
+      "adjacent_cameras": [
+        "CAM_3",
+        "CAM_5"
+      ],
+      "entry_line": null
+    },
+    {
+      "camera_id": "CAM_2",
+      "role": "ZONE",
+      "source_file": "CAM_2.mp4",
+      "name": "Main Floor - Right / Counter Edge",
+      "fps": 29.97,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "coverage": [
+        "FOH_TOP",
+        "FOH_BOTTOM",
+        "CASH_COUNTER"
+      ],
+      "zone_polygons": {
+        "FOH_TOP": [
+          [
+            0.0,
+            0.3
+          ],
+          [
+            0.75,
+            0.3
+          ],
+          [
+            0.75,
+            0.55
+          ],
+          [
+            0.0,
+            0.55
+          ]
+        ],
+        "FOH_BOTTOM": [
+          [
+            0.0,
+            0.55
+          ],
+          [
+            0.75,
+            0.55
+          ],
+          [
+            0.75,
+            0.95
+          ],
+          [
+            0.0,
+            0.95
+          ]
+        ],
+        "CASH_COUNTER": [
+          [
+            0.72,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            1.0
+          ],
+          [
+            0.72,
+            1.0
+          ]
+        ]
+      },
+      "adjacent_cameras": [
+        "CAM_5"
+      ],
+      "entry_line": null
+    },
+    {
+      "camera_id": "CAM_3",
+      "role": "ENTRY",
+      "source_file": "CAM_3.mp4",
+      "name": "Entry / Glass Entrance",
+      "fps": 29.97,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "coverage": [
+        "ENTRY"
+      ],
+      "zone_polygons": {
+        "ENTRY": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.3
+          ],
+          [
+            0.0,
+            0.3
+          ]
+        ]
+      },
+      "adjacent_cameras": [
+        "CAM_1",
+        "CAM_5"
+      ],
+      "entry_line": {
+        "y_normalized": 0.3,
+        "exterior_side": "above"
+      }
+    },
+    {
+      "camera_id": "CAM_5",
+      "role": "BILLING",
+      "source_file": "CAM_5.mp4",
+      "name": "Billing / Cash Counter",
+      "fps": 25.0,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "coverage": [
+        "CASH_COUNTER"
+      ],
+      "zone_polygons": {
+        "CASH_COUNTER": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "adjacent_cameras": [
+        "CAM_1",
+        "CAM_2",
+        "CAM_3"
+      ],
+      "entry_line": null
+    }
+  ],
+  "transition_graph": {
+    "CAM_1": [
+      "CAM_3",
+      "CAM_5"
+    ],
+    "CAM_2": [
+      "CAM_5"
+    ],
+    "CAM_3": [
+      "CAM_1",
+      "CAM_5"
+    ],
+    "CAM_5": [
+      "CAM_1",
+      "CAM_2",
+      "CAM_3"
+    ]
+  }
+}

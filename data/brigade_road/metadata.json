@@ -1,0 +1,116 @@
+{
+  "store": {
+    "store_id": "ST1008",
+    "aliases": ["brigade-bangalore", "Brigade_Bangalore", "STORE_BLR_002"],
+    "store_name": "Brigade Road - Bangalore",
+    "city": "Bangalore",
+    "country": "India",
+    "layout_source": "Brigade Road - Store layoutc5f5d56.xlsx",
+    "layout_notes": "The supplied XLSX stores the useful floor plan as an embedded image, not as tabular polygons. Zones below are manually normalized from that image."
+  },
+  "camera_adjacency": {
+    "CAM_3": ["CAM_1", "CAM_2", "CAM_5"],
+    "CAM_1": ["CAM_2", "CAM_5", "CAM_3"],
+    "CAM_2": ["CAM_1", "CAM_5", "CAM_3"],
+    "CAM_5": ["CAM_1", "CAM_2", "CAM_3"],
+    "CAM_4": []
+  },
+  "cameras": [
+    {
+      "camera_id": "CAM_1",
+      "source_file": "CAM 1.mp4",
+      "role": "floor",
+      "name": "Main floor left/product wall",
+      "observed_duration_seconds": 139.906,
+      "fps": 29.97,
+      "coverage": ["DERMDOC", "GOOD_VIBES", "MAKEUP_UNIT", "FLOOR_CENTER"],
+      "zone_polygons": {
+        "DERMDOC": [[0.61, 0.08], [0.88, 0.08], [0.87, 0.33], [0.6, 0.32]],
+        "GOOD_VIBES": [[0.27, 0.09], [0.58, 0.09], [0.57, 0.33], [0.26, 0.33]],
+        "MAKEUP_UNIT": [[0.4, 0.43], [0.66, 0.42], [0.7, 0.93], [0.36, 0.93]],
+        "FLOOR_CENTER": [[0.02, 0.2], [0.98, 0.2], [0.98, 0.98], [0.03, 0.98]]
+      }
+    },
+    {
+      "camera_id": "CAM_2",
+      "source_file": "CAM 2.mp4",
+      "role": "floor",
+      "name": "Main floor right/makeup wall",
+      "observed_duration_seconds": 125.926,
+      "fps": 29.97,
+      "coverage": ["MAYBELLINE", "FACES_CANADA", "LAKME", "MAKEUP_UNIT", "FLOOR_CENTER"],
+      "zone_polygons": {
+        "MAYBELLINE": [[0.06, 0.22], [0.29, 0.22], [0.3, 0.55], [0.06, 0.56]],
+        "FACES_CANADA": [[0.31, 0.2], [0.53, 0.2], [0.53, 0.57], [0.31, 0.57]],
+        "LAKME": [[0.56, 0.19], [0.78, 0.19], [0.79, 0.57], [0.56, 0.58]],
+        "MAKEUP_UNIT": [[0.11, 0.57], [0.92, 0.57], [0.9, 0.98], [0.11, 0.98]],
+        "FLOOR_CENTER": [[0.04, 0.14], [0.95, 0.14], [0.96, 0.98], [0.04, 0.98]]
+      }
+    },
+    {
+      "camera_id": "CAM_3",
+      "source_file": "CAM 3.mp4",
+      "role": "entry",
+      "name": "Entry and exterior threshold",
+      "observed_duration_seconds": 148.015,
+      "fps": 29.97,
+      "coverage": ["ENTRY", "EXTERIOR_THRESHOLD"],
+      "zone_polygons": {
+        "ENTRY": [[0.26, 0.52], [0.73, 0.52], [0.74, 0.99], [0.25, 0.99]],
+        "EXTERIOR_THRESHOLD": [[0.02, 0.04], [0.98, 0.04], [0.98, 0.5], [0.02, 0.5]]
+      }
+    },
+    {
+      "camera_id": "CAM_4",
+      "source_file": "CAM 4.mp4",
+      "role": "support",
+      "name": "Back room/support area",
+      "observed_duration_seconds": 145.988,
+      "fps": 25.0,
+      "coverage": ["BACK_ROOM", "STAFF_SUPPORT"],
+      "zone_polygons": {
+        "BACK_ROOM": [[0.05, 0.12], [0.95, 0.12], [0.94, 0.98], [0.05, 0.98]],
+        "STAFF_SUPPORT": [[0.62, 0.08], [0.95, 0.08], [0.95, 0.43], [0.62, 0.43]]
+      }
+    },
+    {
+      "camera_id": "CAM_5",
+      "source_file": "CAM 5.mp4",
+      "role": "billing",
+      "name": "Billing and cash counter",
+      "observed_duration_seconds": 138.703,
+      "fps": 25.0,
+      "coverage": ["BILLING", "CASH_COUNTER", "PMU"],
+      "zone_polygons": {
+        "BILLING": [[0.05, 0.24], [0.39, 0.24], [0.39, 0.96], [0.05, 0.96]],
+        "CASH_COUNTER": [[0.4, 0.21], [0.86, 0.21], [0.86, 0.97], [0.4, 0.97]],
+        "PMU": [[0.79, 0.02], [0.99, 0.02], [0.99, 0.31], [0.79, 0.31]]
+      }
+    }
+  ],
+  "zones": [
+    {"zone_id": "ENTRY", "zone_name": "Entry / Existing Glass", "zone_type": "entry", "layout_box": [0, 70, 110, 360]},
+    {"zone_id": "FLOOR_CENTER", "zone_name": "Front of House Center", "zone_type": "floor", "layout_box": [260, 90, 690, 340]},
+    {"zone_id": "MAKEUP_UNIT", "zone_name": "Central Makeup Unit", "zone_type": "floor", "layout_box": [490, 150, 590, 260]},
+    {"zone_id": "BILLING", "zone_name": "Billing / Cash Counter", "zone_type": "billing", "layout_box": [780, 110, 850, 290]},
+    {"zone_id": "PMU", "zone_name": "PMU", "zone_type": "service", "layout_box": [880, 290, 930, 370]},
+    {"zone_id": "DERMDOC", "zone_name": "DermDoc", "zone_type": "skin", "layout_box": [380, 30, 455, 72]},
+    {"zone_id": "GOOD_VIBES", "zone_name": "Good Vibes", "zone_type": "skin", "layout_box": [290, 30, 370, 72]},
+    {"zone_id": "THE_FACE_SHOP", "zone_name": "The Face Shop", "zone_type": "skin", "layout_box": [195, 30, 278, 72]},
+    {"zone_id": "MINIMALIST", "zone_name": "Minimalist", "zone_type": "skin", "layout_box": [470, 30, 555, 72]},
+    {"zone_id": "AQUALOGICA", "zone_name": "Aqualogica", "zone_type": "skin", "layout_box": [560, 30, 645, 72]},
+    {"zone_id": "LAKME_SKIN", "zone_name": "Lakme Skin", "zone_type": "skin", "layout_box": [650, 30, 735, 72]},
+    {"zone_id": "MAYBELLINE", "zone_name": "Maybelline", "zone_type": "makeup", "layout_box": [130, 390, 215, 430]},
+    {"zone_id": "FACES_CANADA", "zone_name": "Faces Canada", "zone_type": "makeup", "layout_box": [220, 390, 305, 430]},
+    {"zone_id": "LAKME", "zone_name": "Lakme", "zone_type": "makeup", "layout_box": [315, 390, 395, 430]},
+    {"zone_id": "COLORBAR_SUGAR", "zone_name": "Colorbar + Sugar", "zone_type": "makeup", "layout_box": [410, 390, 495, 430]},
+    {"zone_id": "SWISS_BEAUTY", "zone_name": "Swiss Beauty", "zone_type": "makeup", "layout_box": [500, 390, 580, 430]},
+    {"zone_id": "RENEE_NY_BAE", "zone_name": "Renee / NY Bae", "zone_type": "makeup", "layout_box": [585, 390, 670, 430]},
+    {"zone_id": "ALPS_GOODNESS", "zone_name": "Alps Goodness", "zone_type": "personal_care", "layout_box": [675, 385, 760, 430]},
+    {"zone_id": "STREAX", "zone_name": "Streax", "zone_type": "hair", "layout_box": [765, 385, 815, 430]},
+    {"zone_id": "BACK_ROOM", "zone_name": "Back Room / Support", "zone_type": "staff", "layout_box": [0, 0, 180, 180]},
+    {"zone_id": "STAFF_SUPPORT", "zone_name": "Staff Support Desk", "zone_type": "staff", "layout_box": [180, 0, 300, 120]},
+    {"zone_id": "EXTERIOR_THRESHOLD", "zone_name": "Exterior Threshold", "zone_type": "entry", "layout_box": [0, 0, 120, 120]},
+    {"zone_id": "CASH_COUNTER", "zone_name": "Cash Counter", "zone_type": "billing", "layout_box": [790, 120, 880, 290]}
+  ]
+}

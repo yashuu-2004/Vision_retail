@@ -1,0 +1,29 @@
+.git
+.gitignore
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.pytest_cache/
+.coverage
+
+htmlcov/
+
+tests/
+
+venv/
+.venv/
+
+*.db-journal
+
+Store 1/
+Store 2/
+
+Assessment*.pdf
+Purplle*.pdf
+
+CCTV Footage-*.zip
+
+README_assets/
